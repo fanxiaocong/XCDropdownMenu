@@ -88,18 +88,4 @@
  */
 - (nullable UIImage *)snapshotImageAfterScreenUpdates:(BOOL)afterUpdates;
 
-
-
 @end
-
-
-
-
-
-
-
-
-
-
-
-

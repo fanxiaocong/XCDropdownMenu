@@ -39,7 +39,7 @@
  */
 - (instancetype)initWithImageName:(NSString *)imageName
                             title:(NSString *)title
-                   didClickHandle:(void(^)())didClickHandle;
+                   didClickHandle:(void(^)(void))didClickHandle;
 
 /**
  创建一个 item 的数据模型
@@ -50,7 +50,7 @@
  */
 + (instancetype)dropdownModelWithImageName:(NSString *)imageName
                                      title:(NSString *)title
-                            didClickHandle:(void(^)())didClickHandle;
+                            didClickHandle:(void(^)(void))didClickHandle;
 
 @end
 
@@ -77,13 +77,13 @@
 /** 👀 下拉菜单的圆角大小 👀 */
 @property (assign, nonatomic) CGFloat menuCornerRadius;
 /** 👀 下拉菜单的背景颜色 👀 */
-@property (weak, nonatomic) UIColor *normalMenuBackgroundColor;
+@property (strong, nonatomic) UIColor *normalMenuBackgroundColor;
 /** 👀 选中状态下的背景颜色 👀 */
-@property (weak, nonatomic) UIColor *selectedMenuBackgroundColor;
+@property (strong, nonatomic) UIColor *selectedMenuBackgroundColor;
 /** 👀 标题的文字的颜色 👀 */
-@property (weak, nonatomic) UIColor *titleColor;
+@property (strong, nonatomic) UIColor *titleColor;
 /** 👀 分隔线的颜色 👀 */
-@property (weak, nonatomic) UIColor *seperatorLineColor;
+@property (strong, nonatomic) UIColor *seperatorLineColor;
 
 /**
  默认配置
@@ -124,24 +124,4 @@
             options:(XCDropdownOptionConfiguration *)options;
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

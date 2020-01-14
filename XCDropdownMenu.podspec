@@ -20,4 +20,7 @@ Pod::Spec.new do |s|
   s.source_files  = "XCDropdownMenu"
   s.requires_arc = true
 
+   s.platform     = :ios, "8.0"
+  s.frameworks   =  'UIKit'
+
 end

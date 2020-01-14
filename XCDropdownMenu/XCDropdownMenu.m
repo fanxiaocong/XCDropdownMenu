@@ -41,7 +41,7 @@
  */
 - (instancetype)initWithImageName:(NSString *)imageName
                             title:(NSString *)title
-                   didClickHandle:(void(^)())didClickHandle
+                   didClickHandle:(void(^)(void))didClickHandle
 {
     if (self = [super init])
     {
@@ -62,7 +62,7 @@
  */
 + (instancetype)dropdownModelWithImageName:(NSString *)imageName
                                      title:(NSString *)title
-                            didClickHandle:(void(^)())didClickHandle
+                            didClickHandle:(void(^)(void))didClickHandle
 {
     return [[self alloc] initWithImageName:imageName title:title didClickHandle:didClickHandle];
 }
@@ -227,8 +227,6 @@
     self.titleLB.centerY = self.icon.centerY;
     [self.titleLB sizeToFit];
 }
-
-
 
 @end
 
@@ -689,23 +687,4 @@
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
